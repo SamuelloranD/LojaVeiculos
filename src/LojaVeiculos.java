@@ -43,7 +43,7 @@ public class LojaVeiculos {
                 int escolhaMoto = sc.nextInt();
                 Veiculo moto = null;
                 if (escolhaMoto == 1) {
-                    moto = new Moto("Fan", tempoMoto, "125c", 80);
+                    moto = new Moto("Fan", tempoMoto, "125cc", 80);
                 } else if (escolhaMoto == 2) {
                     moto = new Moto("Lander", tempoMoto, "250cc", 100);
                 } else if (escolhaMoto == 3) {
