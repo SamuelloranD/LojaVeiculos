@@ -21,11 +21,10 @@ public abstract class Veiculo {
         return tempo;
     }
 
-    // Método abstrato que deve ser implementado nas subclasses
     public abstract double calcularValorFinal();
 
     public String exibirInformacoes() {
         return "Modelo: " + getModelo() +
-                "\nValor a ser pago: R$ " + calcularValorFinal();
+                "\nValor a ser pago: R$ " + String.format("%.2f", calcularValorFinal());
     }
 }
