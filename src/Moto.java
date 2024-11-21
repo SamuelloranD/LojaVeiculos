@@ -1,8 +1,8 @@
 public class Moto extends Veiculo {
     private String cilindrada;
 
-    public Moto(String modelo, int tempo, String cilindrada) {
-        super(modelo, tempo);
+    public Moto(String modelo, int tempo, String cilindrada, int taxa) {
+        super(modelo, tempo, taxa);
         this.cilindrada = cilindrada;
     }
 
@@ -12,7 +12,7 @@ public class Moto extends Veiculo {
 
     @Override
     public double calcularValorFinal() {
-        return getTempo() * 50; // Valor por dia para motos: R$ 50
+        return getTempo() * getTaxa();
     }
 
     @Override
