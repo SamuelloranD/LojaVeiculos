@@ -1,3 +1,6 @@
+package model;
+import util.NomesVeiculos;
+
 public class Moto extends Veiculo {
     private String cilindrada;
 

@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Veiculo {
     private String modelo;
     private int tempo;
