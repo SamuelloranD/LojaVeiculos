@@ -1,8 +1,8 @@
 public class Carro extends Veiculo {
     private int portas;
 
-    public Carro(String modelo, int tempo, int portas, int taxa) {
-        super(modelo, tempo, taxa);
+    public Carro(NomesVeiculos modelo, int tempo, int portas, int taxa) {
+        super(modelo.name(), tempo, taxa);
         this.portas = portas;
     }
 

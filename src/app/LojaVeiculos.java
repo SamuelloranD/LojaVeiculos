@@ -1,3 +1,8 @@
+import model.Carro;
+import model.Moto;
+import model.Veiculo;
+import util.NomesVeiculos;
+
 import java.util.Scanner;
 
 public class LojaVeiculos {
@@ -23,13 +28,13 @@ public class LojaVeiculos {
                 Veiculo carro;
                 switch (escolhaCarro) {
                     case 1:
-                        carro = new Carro("Kwid", tempoCarro, 4, 80);
+                        carro = new Carro(NomesVeiculos.KWID, tempoCarro, 4, 80);
                         break;
                     case 2:
-                        carro = new Carro("Chronos", tempoCarro, 4, 100);
+                        carro = new Carro(NomesVeiculos.CHRONOS, tempoCarro, 4, 100);
                         break;
                     case 3:
-                        carro = new Carro("Corolla", tempoCarro, 4, 150);
+                        carro = new Carro(NomesVeiculos.COROLLA, tempoCarro, 4, 150);
                         break;
                     default:
                         System.out.println("[INVÁLIDO]");
@@ -50,13 +55,13 @@ public class LojaVeiculos {
                 Veiculo moto;
                 switch (escolhaMoto) {
                     case 1:
-                        moto = new Moto("Fan", tempoMoto, "125cc", 80);
+                        moto = new Moto(NomesVeiculos.FAN, tempoMoto, "125cc", 80);
                         break;
                     case 2:
-                        moto = new Moto("Lander", tempoMoto, "250cc", 100);
+                        moto = new Moto(NomesVeiculos.LANDER, tempoMoto, "250cc", 100);
                         break;
                     case 3:
-                        moto = new Moto("CB 500x", tempoMoto, "500cc", 140);
+                        moto = new Moto(NomesVeiculos.CB500X, tempoMoto, "500cc", 140);
                         break;
                     default:
                         System.out.println("[INVÁLIDO]");
