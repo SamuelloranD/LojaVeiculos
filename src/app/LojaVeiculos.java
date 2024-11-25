@@ -5,11 +5,22 @@ import model.Moto;
 import model.Veiculo;
 import util.NomesVeiculos;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LojaVeiculos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> modelosCarros = new ArrayList<>();
+        modelosCarros.add("Kwid");
+        modelosCarros.add("Chronos");
+        modelosCarros.add("Corolla");
+
+        ArrayList<String> modelosMotos = new ArrayList<>();
+        modelosMotos.add("Fan");
+        modelosMotos.add("Lander");
+        modelosMotos.add("CB 500x");
 
         System.out.println("BEM VINDO A LOJA *ALUGA DEVS*");
         System.out.println("Escolha uma opção para alugar:" +
@@ -21,10 +32,10 @@ public class LojaVeiculos {
             case 1:
                 System.out.println("Por quanto tempo você deseja alugar o veículo? (DIAS) ");
                 int tempoCarro = sc.nextInt();
-                System.out.println("ESCOLHA UM MODELO: " +
-                        "\n1: Kwid" +
-                        "\n2: Chronos" +
-                        "\n3: Corolla");
+                System.out.println("ESCOLHA UM MODELO: ");
+                for (int i = 0; i < modelosCarros.size(); i++) {
+                    System.out.println((i + 1) + ": " + modelosCarros.get(i));
+                }
                 int escolhaCarro = sc.nextInt();
 
                 Veiculo carro;
@@ -48,10 +59,10 @@ public class LojaVeiculos {
             case 2:
                 System.out.println("Por quanto tempo você deseja alugar o veículo? (DIAS)");
                 int tempoMoto = sc.nextInt();
-                System.out.println("ESCOLHA UM MODELO: " +
-                        "\n1: Fan" +
-                        "\n2: Lander" +
-                        "\n3: CB 500x");
+                System.out.println("ESCOLHA UM MODELO: ");
+                for (int i = 0; i < modelosMotos.size(); i++) {
+                    System.out.println((i + 1) + ": " + modelosMotos.get(i));
+                }
                 int escolhaMoto = sc.nextInt();
 
                 Veiculo moto;
