@@ -28,6 +28,8 @@ public class LojaVeiculos {
                 "\n2: MOTOS");
         int resp = sc.nextInt();
 
+        Veiculo veiculo;
+
         switch (resp) {
             case 1:
                 System.out.println("Por quanto tempo você deseja alugar o veículo? (DIAS) ");
@@ -38,7 +40,7 @@ public class LojaVeiculos {
                 }
                 int escolhaCarro = sc.nextInt();
 
-                Veiculo veiculo;
+
                 switch (escolhaCarro) {
                     case 1:
                         veiculo = new Carro(NomesVeiculos.KWID, tempoCarro, 4, 80);
@@ -68,19 +70,19 @@ public class LojaVeiculos {
                 Veiculo veiculo1;
                 switch (escolhaMoto) {
                     case 1:
-                        veiculo1 = new Moto(NomesVeiculos.FAN, tempoMoto, "125cc", 80);
+                        veiculo = new Moto(NomesVeiculos.FAN, tempoMoto, "125cc", 80);
                         break;
                     case 2:
-                        veiculo1 = new Moto(NomesVeiculos.LANDER, tempoMoto, "250cc", 100);
+                        veiculo = new Moto(NomesVeiculos.LANDER, tempoMoto, "250cc", 100);
                         break;
                     case 3:
-                        veiculo1 = new Moto(NomesVeiculos.CB500X, tempoMoto, "500cc", 140);
+                        veiculo = new Moto(NomesVeiculos.CB500X, tempoMoto, "500cc", 140);
                         break;
                     default:
                         System.out.println("[INVÁLIDO]");
                         return;
                 }
-                System.out.println(veiculo1.exibirInformacoes());
+                System.out.println(veiculo.exibirInformacoes());
                 break;
 
             default:
